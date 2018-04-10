@@ -49,9 +49,10 @@ polo.start(); // "VROOM!"
 // 5 - Create a class for a Motorcycle. Each object created from the Motorcycle function should also have a make, model, and year and a property called numWheels which should be 2. The Motorcycle prototype should inherit all of the methods from the Vehicle prototype
 
 class Motorcycle extends Vehicle {
-  constructor(make,model, year, numWheels = 2){
-      super(make, model, year);
-  this.numWheels = numWheels;
+  constructor(){
+    // We can refactor this code to be much less
+    super(...arguments);
+    this.numWheels = 2;
   }
 }
 
